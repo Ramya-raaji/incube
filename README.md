@@ -9,4 +9,4 @@ Output: an integer, sum of the numbers
 
 Examples:
 Input: "", "1", "1,5"
-Output: 0, 1, 6
+Output: 0 1 6

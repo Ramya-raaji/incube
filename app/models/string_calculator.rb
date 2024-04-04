@@ -1,16 +1,13 @@
 class StringCalculator
   def self.add(numbers)
-    new_array = String.new
-    numbers.each do |number|
-    delimiter = detect_delimiter(number)
-    numbers = remove_delimiter_declaration(number)
+    delimiter = detect_delimiter(numbers)
+    numbers = remove_delimiter_declaration(numbers)
 
-    new_array = new_array +  "#{number.split(/#{delimiter}|\n/)
+    new_array = numbers.split(/#{delimiter}|\n/)
            .map(&:to_i)
            .tap { |nums| check_negatives(nums) }
-           .sum} "
-    end 
-    new_array
+           .sum
+    return new_array
   end
 
   private
